@@ -20,6 +20,7 @@ mse = round(np.mean((lr.predict(b) - boston.target) ** 2),2)
 # lr Residual Plot
 plt.subplot(2,1,1)
 plt.scatter(lr.predict(b),lr.predict(b) - boston.target)
+plt.hlines(y = 0, xmin = 0, xmax = 40)
 plt.title(' lr Residual Plot')
 plt.xlabel('Predicted Price')
 plt.ylabel('Error(mse = ' + str(mse) + ')')
